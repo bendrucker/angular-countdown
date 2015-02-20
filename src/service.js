@@ -13,12 +13,12 @@ const factory = function ($interval) {
     }
     start () {
       const tickInterval = this.options.tickInterval;
-      this.$$position = 0;
       this.$$interval = $interval(() => {
-        const tickProportion = tickInterval / this.length;
-        this.$$position += (tickProportion * 2 * Math.PI);
-        this.emit('tick', this.$$position, tickProportion);
+        this.emit('tick', tickInterval / this.length);
       }, tickInterval, this.length / tickInterval);
+
+      this.$$interval.then(() => this.emit('done'));
+
       return this;
     }
   };

@@ -41,13 +41,12 @@ export default function () {
       expect(onTick.callCount).to.equal(2);
     });
 
-    it('emits the distance and tick proportion', function () {
+    it('emits the tick proportion', function () {
       const onTick = sinon.spy();
       timer.on('tick', onTick);
       timer.start();
       $interval.flush(15);
-      expect(onTick.firstCall.args[0]).to.equal(Math.PI * 2 / 100);
-      expect(onTick.firstCall.args[1]).to.equal(.01);
+      expect(onTick.firstCall.args[0]).to.equal(.01);
     });
 
     it('returns itself', function () {
