@@ -3,7 +3,7 @@
 import EventEmitter from 'events';
 import angular from 'angular';
 
-const factory = function ($interval) {
+function factory ($interval) {
   return class CountdownTimer extends EventEmitter {
     constructor (length, options) {
       this.length = length;
@@ -22,7 +22,7 @@ const factory = function ($interval) {
       return this;
     }
   };
-};
+}
 factory.$inject = ['$interval'];
 
 export default factory;
