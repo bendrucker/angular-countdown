@@ -49,6 +49,17 @@ export default function () {
       expect(onTick.firstCall.args[0]).to.equal(.01);
     });
 
+    it('emits a done event when complete', function () {
+      timer = new CountdownTimer(2, {
+        tickInterval: 1
+      });
+      const onDone = sinon.spy();
+      timer.on('done', onDone);
+      timer.start();
+      $interval.flush(2);
+      expect(onDone.callCount).to.equal(1);
+    });
+
     it('returns itself', function () {
       expect(timer.start()).to.equal(timer);
     });
