@@ -1,4 +1,10 @@
-<svg class="countdown" ng-attr-width="{{countdown.diameter}}" ng-attr-height="{{countdown.diameter}}" ng-attr-viewbox="0 0 {{countdown.diameter}} {{countdown.diameter}}">
+<svg
+  ng-if="!countdown.done"
+  class="countdown"
+  ng-attr-width="{{countdown.diameter}}"
+  ng-attr-height="{{countdown.diameter}}"
+  ng-attr-viewbox="0 0 {{countdown.diameter}} {{countdown.diameter}}"
+>
   <defs>
     <mask ng-attr-id="countdown-mask-{{countdown.$id}}">
       <circle cx="50%" cy="50%" ng-attr-r="{{countdown.radius}}" fill="#fff" />
