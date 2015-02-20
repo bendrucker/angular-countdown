@@ -10,8 +10,19 @@ export default function () {
     CountdownTimer = _CountdownTimer_;
   }));
 
-  it('works', function () {
-    expect(CountdownTimer).to.be.a('function');
+  describe('Constructor', function () {
+
+    it('captures the length', function () {
+      expect(new CountdownTimer(1000)).to.have.property('length', 1000);
+    });
+
+    it('can set options', function () {
+      expect(new CountdownTimer(1000, {
+        tickInterval: 30
+      }))
+      .to.have.deep.property('options.tickInterval', 30);
+    });
+
   });
 
 }
