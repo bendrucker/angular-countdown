@@ -19,6 +19,7 @@ const factory = function ($interval) {
         this.$$position += (tickProportion * 2 * Math.PI);
         this.emit('tick', this.$$position, tickProportion);
       }, tickInterval, this.length / tickInterval);
+      return this;
     }
   };
 };

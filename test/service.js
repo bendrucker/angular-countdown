@@ -50,6 +50,10 @@ export default function () {
       expect(onTick.firstCall.args[1]).to.equal(.01);
     });
 
+    it('returns itself', function () {
+      expect(timer.start()).to.equal(timer);
+    });
+
   });
 
 }
