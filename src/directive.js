@@ -1,5 +1,7 @@
 'use strict';
 
+import template from './template.html';
+
 export default {
   restrict: 'EA',
   scope: {
@@ -7,7 +9,8 @@ export default {
   },
   controller: CountdownController,
   bindToController: true,
-  controllerAs: 'countdown'
+  controllerAs: 'countdown',
+  template: template
 }
 
 class CountdownController {}
