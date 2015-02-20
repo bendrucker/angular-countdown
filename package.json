@@ -1,0 +1,25 @@
+{
+  "name": "angular-countdown",
+  "version": "1.0.0",
+  "description": "Radial countdown timer for Angular",
+  "main": "./src",
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/angular-countdown.git"
+  },
+  "keywords": [
+    "angular",
+    "countdown",
+    "radial",
+    "animated"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/angular-countdown/issues"
+  },
+  "homepage": "https://github.com/bendrucker/angular-countdown"
+}
