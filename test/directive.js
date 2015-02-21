@@ -19,6 +19,10 @@ export default function () {
 
   describe('Countdown Controller', function () {
 
+    it('parses the radius', function () {
+      expect(controller.radius).to.equal(15);
+    });
+
     it('exposes a unique scope id', function () {
       expect(controller.$id).to.be.a('number');
     });
@@ -47,6 +51,16 @@ export default function () {
       expect(controller.y).to.equal(-15);
       controller.angle = Pi / 2;
       expect(controller.y).to.be.closeTo(0, .01);
+    });
+
+    it('adds to the angle when the timer ticks', function () {
+      timer.emit('tick', 1);
+      expect(controller.angle).to.equal(2 * Pi);
+    });
+
+    it('sets a done flag when the timer is done', function () {
+      timer.emit('done');
+      expect(controller.done).to.equal(true);
     });
 
   });

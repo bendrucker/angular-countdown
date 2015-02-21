@@ -24,8 +24,8 @@ export default function () {
 }
 
 function CountdownController ($scope) {
-  this.radius = parseInt(this.radius);
   this.$id = $scope.$id;
+  this.radius = parseInt(this.radius);
   this.angle = 0;
   Object.defineProperties(this, {
     diameter: {
