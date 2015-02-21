@@ -1,6 +1,6 @@
 {
   "name": "angular-countdown",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Radial countdown timer for Angular",
   "main": "./src",
   "scripts": {
