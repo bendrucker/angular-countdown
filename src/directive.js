@@ -12,7 +12,7 @@ export default function () {
     restrict: 'EA',
     scope: {
       timer: '=',
-      diameter: '@',
+      radius: '@',
       stroke: '@'
     },
     controller: CountdownController,
@@ -24,12 +24,13 @@ export default function () {
 }
 
 function CountdownController ($scope) {
+  this.radius = parseInt(this.radius);
   this.$id = $scope.$id;
   this.angle = 0;
   Object.defineProperties(this, {
-    radius: {
+    diameter: {
       get () {
-        return this.diameter / 2;
+        return this.radius * 2;
       }
     },
     mid: {

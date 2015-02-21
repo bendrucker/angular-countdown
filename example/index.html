@@ -8,7 +8,7 @@
         require('angular-countdown')
       ])
       .controller('AppController', function (CountdownTimer) {
-        this.timer = new CountdownTimer(1000);
+        this.timer = new CountdownTimer(5000);
       });
     </script>
     <style>
@@ -22,7 +22,7 @@
   </head>
   <body ng-app="app">
     <div ng-controller="AppController as app">
-      <countdown timer="app.timer" diameter="25" stroke="5"></countdown>
+      <countdown timer="app.timer" radius="25" stroke="5"></countdown>
       <button ng-click="app.timer.start()">Start</button>
     </div>
   </body>
