@@ -42,3 +42,7 @@ When the `length` has passed, the `timer` will emit a `'done'` event.
 The `<countdown>` directive accepts three parameters: the `timer` to bind to, the `radius` of the timer circle, and the `width` of the stroke. It builds the SVG needed to create the radial timer effect.
 
 For an example, run `npm run example`. 
+
+## Credits
+
+Inspired by [svgPieTimer.js](https://github.com/agrimsrud/svgPieTimer.js)
