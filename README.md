@@ -7,7 +7,10 @@ Radial countdown component for Angular built with SVG.
 ## Installing
 
 ```sh
+# npm
 npm install angular-countdown
+# bower
+bower install angular-countdown
 ```
 
 ## API
