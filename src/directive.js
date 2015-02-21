@@ -1,7 +1,11 @@
 'use strict';
 
 import template from './template.html';
+import styles from './styles.css';
+import insertCss from 'insert-css';
 const Pi = Math.PI;
+
+insertCss(styles);
 
 export default function () {
   return {
