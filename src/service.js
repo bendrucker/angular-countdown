@@ -21,6 +21,13 @@ function factory ($interval) {
 
       return this;
     }
+    cancel () {
+      if (this.$$interval) {
+        $interval.cancel(this.$$interval);
+        this.emit('done');
+      }
+      return this;
+    }
   };
 }
 factory.$inject = ['$interval'];

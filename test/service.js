@@ -66,4 +66,29 @@ export default function () {
 
   });
 
+  describe('#cancel', function () {
+
+    it('is a noop if not started', function () {
+      timer.cancel();
+    });
+
+    it('cancels the interval', function () {
+      const onTick = sinon.spy();
+      timer.on('tick', onTick);
+      timer.start();
+      timer.cancel();
+      $interval.flush(15);
+      expect(onTick.callCount).to.equal(0);
+    });
+
+    it('emits a done event', function () {
+      const onDone = sinon.spy();
+      timer.on('done', onDone);
+      timer.start();
+      timer.cancel();
+      expect(onDone.callCount).to.equal(1);
+    });
+
+  });
+
 }

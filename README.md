@@ -36,6 +36,10 @@ Starts the `timer`. At each interval (as defined by `options.tickInterval`), the
 
 When the `length` has passed, the `timer` will emit a `'done'` event. 
 
+##### `timer.cancel()` -> `timer`
+
+Cancels the `timer` and cleans up the `$interval` backing it. Emits a `'done'` event.
+
 ### `<countdown>`
 
 ```html
