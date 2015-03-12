@@ -13,6 +13,16 @@ npm install angular-countdown
 bower install angular-countdown
 ```
 
+```js
+angular.module('myApp', [
+  require('angular-countdown')
+]);
+// or with script tags
+angular.module('myApp', [
+  'countdown'
+]);
+```
+
 ## API
 
 angular-countdown provides two interfaces designed to be used together:
