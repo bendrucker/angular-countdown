@@ -1,4 +1,4 @@
-# angular-countdown [![Build Status](https://travis-ci.org/bendrucker/angular-countdown.svg?branch=master)](https://travis-ci.org/bendrucker/angular-countdown)
+# angular-countdown [![Build Status](https://travis-ci.org/bendrucker/angular-countdown.svg?branch=master)](https://travis-ci.org/bendrucker/angular-countdown) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/angular-countdown.svg)](https://greenkeeper.io/)
 
 Radial countdown component for Angular built with SVG.
 
